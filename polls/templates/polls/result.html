@@ -1,0 +1,27 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>ClinGen</title>
+    {% load staticfiles %}
+    <img src="{% static "images/logo_genomika.png" %}" alt="logo_genomika"/>
+ </head>
+ <body>
+    <h1>Results</h1> 
+    <!-- List of uploaded document -->
+    {% if sucess %}
+        <ul>
+            Get recent result: <a href="{% url 'download' %}?id={{ id }}">download</a>
+        </ul>
+        {% for h in historic %}
+            <ul>
+                <a href="{% url 'download' %}?id={{ h.id }}"> {{ h.name }}</a>  
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>No documents results.</p>
+    {% endif %}
+
+    </body>
+ </html>
+
+	 
