@@ -8,5 +8,5 @@ class VcfForm(forms.Form):
 
 class DocumentForm(forms.Form):
     docfile = forms.FileField(
-        label='Select a file (.VCF)'
+        label='Selecione um arquivo (.VCF)'
     )

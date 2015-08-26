@@ -16,16 +16,21 @@ from django.utils.encoding import smart_str
 
 
 def index(request):
+    context = {}
 
     if request.method == 'GET':
         form = DocumentForm()
 
-        return render_to_response('polls/index.html',
-                                  {'form': form}, \
-                                  context_instance=RequestContext(request))
+     #   return render_to_response('polls/index.html',
+     #                             {'form': form}, \
+     #                             context_instance=RequestContext(request))
+
+        context['form'] = form
+
+        return render(request, 'polls/index.html', context)
 
     if request.method == 'POST':
-        context = {}
+        
         context['sucess'] = False
         form = DocumentForm(request.POST, request.FILES)
 

@@ -1,0 +1,31 @@
+##fileformat=VCFv4.1
+##FORMAT=<ID=GQX,Number=1,Type=Integer,Description="Minimum of {Genotype quality assuming variant position,Genotype quality assuming non-variant position}">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=AD,Number=.,Type=Integer,Description="Allele Depth">
+##FORMAT=<ID=VF,Number=1,Type=Float,Description="Variant Frequency">
+##FORMAT=<ID=NL,Number=1,Type=Integer,Description="Applied BaseCall Noise Level">
+##FORMAT=<ID=SB,Number=1,Type=Float,Description="StrandBias Score">
+##INFO=<ID=TI,Number=.,Type=String,Description="Transcript ID">
+##INFO=<ID=GI,Number=.,Type=String,Description="Gene ID">
+##INFO=<ID=EXON,Number=0,Type=Flag,Description="Exon Region">
+##INFO=<ID=FC,Number=.,Type=String,Description="Functional Consequence">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total Depth">
+##FILTER=<ID=LowVariantFreq,Description="Low variant frequency < 0.01">
+##FILTER=<ID=LowGQ,Description="GQ below < 30.00">
+##FILTER=<ID=R8,Description="IndelRepeatLength is greater than 8">
+##FILTER=<ID=LowDP,Description="Low coverage (DP tag), therefore no genotype called">
+##FILTER=<ID=SB,Description="Variant strand bias too high or coverage on only one strand">
+##annotator=MARS
+##fileDate=20141030
+##source=CallSomaticVariants 3.2.3.0
+##CallSomaticVariants_cmdline=" -B D:\Illumina\MiSeqAnalysis\141029_M00538_0057_000000000-D06EC\Data\Intensities\BaseCalls\Alignment -g [C:\Illumina\MiSeq Reporter\Genomes\Homo_sapiens\UCSC\hg19\Sequence\WholeGenomeFASTA,] -f 0.01 -fo True -b 20 -q 100 -c 10 -s 0.5 -a 20 -F 20 -gVCF False -i true -r D:\Illumina\MiSeqAnalysis\141029_M00538_0057_000000000-D06EC"
+##reference=C:\Illumina\MiSeq Reporter\Genomes\Homo_sapiens\UCSC\hg19\Sequence\WholeGenomeFASTA\genome.fa
+##contig=<ID=chr1,length=249250621>
+##contig=<ID=chr7,length=159138663>
+##contig=<ID=chr12,length=133851895>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	11	OMIN
+chr11	56638897	.	T	C	19.79	LowQual	GI=BRCA1;TI=AC=2;AF=1.00;AN=2;DP=2;FS=0.000;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;QD=9.89;SOR=0.693	GT:AD:DP:GQ:PL	1/1:0,2:2:6:47,6,0	#113705;
+chr13	114579982	rs9604566	C	A	988.77	.	GI=BRCA2;AC=2;AF=1.00;AN=2;DB;DP=40;FS=0.000;MLEAC=2;MLEAF=1.00;MQ=60.00;MQ0=0;QD=24.72;SOR=1.151	GT:AD:DP:GQ:PL	1/1:0,40:40:99:1017,119,0	#600185;
+chr16	3296478	rs56260135	T	G	1454.77	.	GI=MVK;AC=1;AF=0.500;AN=2;BaseQRankSum=-0.552;ClippingRankSum=-0.291;DB;DP=242;FS=4.526;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=1.187;QD=6.01;ReadPosRankSum=2.426;SOR=0.400	GT:AD:DP:GQ:PL	0/1:161,79:240:99:1483,0,4046	#607622;#251170;
+chr11	1073710	.	T	C	24.78	LowQual	GI=HRNR;AC=1;AF=0.500;AN=2;BaseQRankSum=-0.085;ClippingRankSum=-0.423;DP=13;FS=0.000;MLEAC=1;MLEAF=0.500;MQ=60.00;MQ0=0;MQRankSum=-0.085;QD=1.91;ReadPosRankSum=0.085;SOR=0.446	GT:AD:DP:GQ:PL	0/1:10,3:13:53:53,0,264	NOK

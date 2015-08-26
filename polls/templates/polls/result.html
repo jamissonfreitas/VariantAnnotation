@@ -1,27 +1,21 @@
- <!DOCTYPE html>
- <html>
- <head>
-    <title>ClinGen</title>
-    {% load staticfiles %}
-    <img src="{% static "images/logo_genomika.png" %}" alt="logo_genomika"/>
- </head>
- <body>
-    <h1>Results</h1> 
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>Resultado</h1> 
     <!-- List of uploaded document -->
     {% if sucess %}
         <ul>
-            Get recent result: <a href="{% url 'download' %}?id={{ id }}">download</a>
+            Anotação efetuada: <a href="{% url 'download' %}?id={{ id }}">click aqui para baixar seu arquivo anotado</a>
         </ul>
+        <h1> Suas últimas anotações </h1>
         {% for h in historic %}
             <ul>
                 <a href="{% url 'download' %}?id={{ h.id }}"> {{ h.name }}</a>  
             </ul>
         {% endfor %}
     {% else %}
-        <p>No documents results.</p>
+        <p>Nenhum resultado.</p>
     {% endif %}
 
-    </body>
- </html>
-
+{% endblock %}
 	 

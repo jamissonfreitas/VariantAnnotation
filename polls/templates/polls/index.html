@@ -1,23 +1,23 @@
- <!DOCTYPE html>
- <html>
- <head>
-    <title>CLINGen</title>
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<!--    <title>CLINGen</title>
     {% load staticfiles %}
-    <img src="{% static "images/logo_genomika.png" %}" alt="logo_genomika"/>
- </head>
- <body>
-    <h1>Variant Annotation</h1>    
-    <form method="post" enctype="multipart/form-data"> 
-    {% csrf_token %}        
+    <img src="{% static "images/logo_genomika.png" %}" alt="logo_genomika"/>-->
+  
+<form method="post" enctype="multipart/form-data"> 
+{% csrf_token %} 
 
-        <p>{{ form.non_field_errors }}</p>
-        <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
-        <p>
-            {{ form.docfile.errors }}
-            {{ form.docfile }}
-        </p>
+    <h1>Anotação de Variantes</h1>         
 
-        <button type="submit">Send for analyse</button>
-     </form>
- </body>
- </html>
+    <p>{{ form.non_field_errors }}</p>
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+
+    <button type="submit">Enviar para análise</button>
+</form>
+
+{% endblock %}
